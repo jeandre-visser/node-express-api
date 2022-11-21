@@ -25,7 +25,13 @@ router.get('/', (req, res) => {
 // Add new users to mock database using post request
 router.post('/', (req, res) => {
   const user = req.body;
+
+  // Assign unique ID to user
   const userId = uuidv4();  
+
+  // Add all properties of user (firstName, lastName, age) using spread operator, and then add id as another property
+  const userWithId = { ...user, id: userId };
+  
   // Push the users into the mock database
   users.push(user);
 
