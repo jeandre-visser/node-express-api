@@ -1,5 +1,6 @@
 import express from "express";
 const router = express.Router();
+import { v4 as uuidv4 } from 'uuid';
 
 // Mock users database
 const users = [
@@ -24,7 +25,7 @@ router.get('/', (req, res) => {
 // Add new users to mock database using post request
 router.post('/', (req, res) => {
   const user = req.body;
-
+  const userId = uuidv4();  
   // Push the users into the mock database
   users.push(user);
 
