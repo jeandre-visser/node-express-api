@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
   // Push the users into the mock database
   users.push(user);
 
-  res.send('Post route confirmed')
+  res.send(`${user.firstName} ${user.lastName} was added to the mock databse.`);
 })
 
 export default router;
