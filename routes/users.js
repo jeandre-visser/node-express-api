@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
   res.send(users)
 });
 
-// 
+// Add new users to mock database using post request
 router.post('/', (req, res) => {
   const user = req.body;
 
