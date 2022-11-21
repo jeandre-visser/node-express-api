@@ -27,4 +27,14 @@ router.post('/', (req, res) => {
   res.send(`${user.firstName} ${user.lastName} was added to the mock database.`);
 })
 
+// Get a specific user by id
+router.get('/:id', (req, res) => {
+  // Use destruction to get the id from req.params
+  const { id } = req.params;
+
+  // Send all the other data (name and age) associated with the specific user id in the url
+  const userFound = users.find((user) => user.id === id)
+  res.send(userFound)
+})
+
 export default router;
