@@ -3,18 +3,7 @@ const router = express.Router();
 import { v4 as uuidv4 } from 'uuid';
 
 // Mock users database
-const users = [
-  {
-    firstName: "Dwayne",
-    lastName: "Johnson",
-    age: 24
-  },
-  {
-    firstName: "Philip",
-    lastName: "Philips",
-    age: 34
-  },
-]
+const users = [];
 
 // All the routes will start with '/users' (as seen in the index.js file), so we just need to route to '/'
 // Get our users
