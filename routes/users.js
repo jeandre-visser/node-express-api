@@ -31,9 +31,9 @@ router.post('/', (req, res) => {
 
   // Add all properties of user (firstName, lastName, age) using spread operator, and then add id as another property
   const userWithId = { ...user, id: userId };
-  
+
   // Push the users into the mock database
-  users.push(user);
+  users.push(userWithId);
 
   res.send(`${user.firstName} ${user.lastName} was added to the mock database.`);
 })
